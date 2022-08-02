@@ -1,0 +1,26 @@
+<html style="background:gray">
+    <center>
+        <!-- view.py 에서 변수를 넘겨받는 예제 -->
+        </br></br></br></br></br></br></br>
+        <h3><font color="white">
+            Hello,  <font color="blue">{{name}}</font>.  This is test page.
+        </h3><font>
+        </br></br></br>
+
+        <!-- 변수를 생성하는 예제 -->
+        {% with someone="computer" %}
+        <p>My name is {{someone}}.</p>
+        {% endwith %}
+        </br></br>
+
+        <!-- view.py/model 에서 변수를 넘겨받는 예제 -->
+        <ul>
+            {% for member in members %}
+            <l1>{{member.name}}</li></br>
+            {% endfor %}
+        </ul>
+        </br></br></br></br></br></br></br>
+
+        <a href="../">뒤로가기</a>
+    </center>
+</html>

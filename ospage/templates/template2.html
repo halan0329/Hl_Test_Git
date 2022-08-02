@@ -1,0 +1,87 @@
+
+<html style="background:gray">
+    <center style="color:white">
+        <!-- if 구문 예제 -->
+        </br></br></br>
+        {% with x=1 %}
+            {% if x == 1 %}
+                <p>one</p></br>
+            {% elif x == 2 %}
+                <p>two</p></br>
+            {% else%}
+                <p>other number</p></br>
+            {% endif %}
+        {% endwith %}
+<!--#################################################-->
+        {% if y == 1 %}
+            <p>one</p></br>
+        {% elif y == 2 %}
+            <p>two</p></br>
+        {% else %}
+            <p>other case</p></br>
+        {% endif %}
+<!--#################################################-->
+        {% if y %}
+            <p>{{y}} is exist</p></br>
+        {% else %}
+            <p>{{y}} is empty</p></br>
+        {% endif %}
+<!--#################################################-->
+        {% if y == 1 %}
+            <p>{{y}} equals 1</p></br>
+        {% elif y != 1 %}
+            <p>{{y}} not eqauls 1</p></br> 
+        {% endif %}          
+<!--#################################################-->
+        {% if y < 1 %}
+            <p>{{y}} is lesser than 1</p></br>
+        {% elif y > 1 %}
+            <p>{{y}} is greater than 1</p></br>            
+        {% endif %}
+<!--#################################################-->
+        {% if x == 2 and z == 'tiger' %}
+            <p>{{x}} and {{z}}</p></br>           
+        {% endif %}       
+<!--#################################################-->
+        {% if x == 2 and z == 'tiger' or x == 3 %}
+            <p>{{x}} and {{z}} or {{x}} </p></br>           
+        {% endif %}          
+<!--#################################################-->
+<!--if문에서도 반복문이 실행되는 것을 확인할 수 있음-->
+        {% if 'grape' in fruits %}
+            <p>It is in. </p></br>
+        {% else %} 
+            <p>It isn't in. </p></br>          
+        {% endif %}         
+
+        {% if 'apple' not in fruits %}
+             <p>It isn't. </p></br>
+        {% endif %}
+<!--#################################################-->
+        {% if x is y %}
+            <p>{{x}} is {{y}}</p></br>
+        {% else %} 
+            <p>{{x}} is not {{y}}</p></br>          
+        {% endif %}   
+<!--#################################################-->
+<!--x와 y는 같은 객체를 가르키는 서로다른 주소값(변수명)을 가지는 변수임-->
+        {% if z is i %}
+            <p>{{z}} is {{i}}</p></br>
+        {% else %} 
+            <p>{{z}} is not {{i}}</p></br>          
+        {% endif %}  
+<!--#################################################-->
+        {% if fruits is fruits2 %}
+             <p>{{fruits}} is {{fruits2}}</p></br>
+        {% else %} 
+             <p>{{fruits}} is not {{fruits2}}</p></br>          
+        {% endif %}         
+<!--#################################################-->
+        {% if fruits == fruits2 %}
+            <p>{{fruits}} == {{fruits2}}</p></br>
+        {% else %} 
+            <p>{{fruits}} != {{fruits2}}</p></br>          
+        {% endif %}         
+        <a href="../">뒤로가기</a>
+    </center>
+</html>
